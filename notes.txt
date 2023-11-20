@@ -1,0 +1,16 @@
+Resenje ukljucuje efikasno citanje iz fajla, manipulisanje stringovima, sumiranje cifara i pronalazak onih stringova sa najvecom sumom
+
+Posto u tekstu zadatka pise da ce biti testirn nad fajlom velicine 5GB, odlucio sam se za promenu velicine Buffera na 32MB.
+Ne znaci da je ta velicina najbolja i najefikasnija, ali svakako mi je znacajno ubrzala program (x2). Da bismo utvrdili
+optimalnu vrednost, potrebno je testirati program sa razlicitim velicinama buffera i izabrati onu koja daje najbolje rezultate.
+
+Odlucio sam se za strings.Index() funkciju umesto strings.Split(), jer nam u ovom slucaju treba samo prvi deo stringa.
+
+Koriscenje strings.Map() funkcije sa anonimnom funkcijom za filtriranje kao parametrom, je dosta performantno.
+Iako je izbacivanje slova iz hash-a nepotrebna aktivnost za krajnje resenje, pisalo je da je potrebno to uraditi pre izracunavanja sume.
+
+Posto je priroda zadatka zasnovana na I/O operacijama, mislim da paralelizacija ne bi poboljsala performanse programa.
+
+
+Uzeo sam za pretpostavku da ce se u fajlu nalaziti samo validni podaci, tako da nisam vodio mnogo racuna o error handling-u
+prilikom citanja iz fajla.
